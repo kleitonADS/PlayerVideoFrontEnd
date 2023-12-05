@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" type="image/svg+xml" href="assets/img/JustPlayIcon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Play App / Just Play</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/102/three.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.3.0/simplex-noise.min.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <div id="app">
+      <div class="message-top">
+        <h1></h1>
+      </div>
+      <div class="content-flex">
+      <div class="main-content">
+      <nav>
+        <div class="title-logo">
+          <button class="button-header" onclick="toogleListSong()">
+            <img src="./assets/img/headphone-fill.svg" alt="list-music" />
+          </button>
+          <h1>Just play</h1>
+        </div>
+
+        <div class="menu-icon" onclick="toogleMenu()">
+          <span class="line-1"></span>
+          <span class="line-2"></span>
+        </div> 
+      </nav>
+
+      <!-- Dropdown Menu -->
+        <div class="dropdown-menu">
+          <div class="title-dropdrow">
+            <span class="icon-settings">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+              >
+                <path
+                  d="M8.68735 4.00008L11.294 1.39348C11.6845 1.00295 12.3176 1.00295 12.7082 1.39348L15.3148 4.00008H19.0011C19.5533 4.00008 20.0011 4.4478 20.0011 5.00008V8.68637L22.6077 11.293C22.9982 11.6835 22.9982 12.3167 22.6077 12.7072L20.0011 15.3138V19.0001C20.0011 19.5524 19.5533 20.0001 19.0011 20.0001H15.3148L12.7082 22.6067C12.3176 22.9972 11.6845 22.9972 11.294 22.6067L8.68735 20.0001H5.00106C4.44877 20.0001 4.00106 19.5524 4.00106 19.0001V15.3138L1.39446 12.7072C1.00393 12.3167 1.00393 11.6835 1.39446 11.293L4.00106 8.68637V5.00008C4.00106 4.4478 4.44877 4.00008 5.00106 4.00008H8.68735ZM6.00106 6.00008V9.5148L3.51578 12.0001L6.00106 14.4854V18.0001H9.51578L12.0011 20.4854L14.4863 18.0001H18.0011V14.4854L20.4863 12.0001L18.0011 9.5148V6.00008H14.4863L12.0011 3.5148L9.51578 6.00008H6.00106ZM12.0011 16.0001C9.79192 16.0001 8.00106 14.2092 8.00106 12.0001C8.00106 9.79094 9.79192 8.00008 12.0011 8.00008C14.2102 8.00008 16.0011 9.79094 16.0011 12.0001C16.0011 14.2092 14.2102 16.0001 12.0011 16.0001ZM12.0011 14.0001C13.1056 14.0001 14.0011 13.1047 14.0011 12.0001C14.0011 10.8955 13.1056 10.0001 12.0011 10.0001C10.8965 10.0001 10.0011 10.8955 10.0011 12.0001C10.0011 13.1047 10.8965 14.0001 12.0011 14.0001Z"
+                  fill="rgba(255,255,255,1)"
+                ></path>
+              </svg>
+            </span>
+            <span class="title-settings">Settings</span>
+          </div>
+          <ul class="itens-menu">
+            <!-- Theme -->
+            <li>
+              <a
+                href="
+              ?"
+              >
+                <span>Theme</span>
+                <input
+                  type="checkbox"
+                  name="change-theme"
+                  id="change-theme"
+                  class="checkbox"
+                />
+                <label class="label" for="change-theme">
+                  <div class="ball"></div>
+                </label>
+              </a>
+            </li>
+
+            <!-- Controls -->
+            <li>
+              <a
+                href="
+              ?"
+              >
+                <span>Controls</span>
+                <input
+                  type="checkbox"
+                  name="change-control"
+                  id="change-control"
+                  class="checkbox"
+                />
+                <label class="label controls-dropdown" for="change-control">
+                  <span class="ball-on">On</span>
+                  <span class="ball-off">Off</span>
+                  <div class="ball controls-dropdown"></div>
+                </label>
+              </a>
+            </li>
+            <!-- Rotation -->
+            <li>
+              <a
+                href="
+              ?"
+              >
+                <span>Rotation</span>
+                <input
+                  type="checkbox"
+                  name="change-rotation"
+                  id="change-rotation"
+                  class="checkbox"
+                />
+                <label class="label controls-dropdown" for="change-rotation">
+                  <span class="ball-on">On</span>
+                  <span class="ball-off">Off</span>
+                  <div class="ball controls-dropdown"></div>
+                </label>
+              </a>
+            </li>
+
+          
+            <!-- Animation -->
+            <li class="animation-li">
+              <a
+                href="
+              ?"
+              >
+                <span>Animation</span>
+                <input
+                  type="checkbox"
+                  name="change-animation"
+                  id="change-animation"
+                  class="checkbox"
+                />
+                <label class="label controls-dropdown" for="change-animation">
+                  <span class="ball-on">On</span>
+                  <span class="ball-off">Off</span>
+                  <div class="ball controls-dropdown"></div>
+                </label>
+              </a>
+            </li>
+
+            <!-- Time -->
+            <li>
+              <a
+                href="
+              ?"
+              >
+                <span>Time</span>
+                <input
+                  type="checkbox"
+                  name="change-time"
+                  id="change-time"
+                  class="checkbox"
+                />
+                <label class="label controls-dropdown" for="change-time">
+                  <span class="ball-on">On</span>
+                  <span class="ball-off">Off</span>
+                  <div class="ball controls-dropdown"></div>
+                </label>
+              </a>
+            </li>
+                     <!-- Labels control -->
+                    
+            <li class="label-li">
+             <a
+                href="
+              ?"
+              >
+                <span>Lables</span>
+              
+                <input
+                  type="checkbox"
+                  name="change-label"
+                  id="change-label"
+                  class="checkbox"
+                />
+                <label class="label controls-dropdown controls-dropdown-lables" for="change-label">
+                  <span class="ball-on">On</span>
+                  <span class="ball-off">Off</span>
+                  <div class="ball controls-dropdown"></div>
+                </label>
+              </a>
+            </li>
+            <!-- Social Labels -->
+            <li class="label-controls">
+              <a>
+                <span class-="100">Icons</span>
+                <br>
+                <div class="list-social-medias">
+                  
+                  
+           
+                  <ul class="icons-social-medias">
+            
+                    <li class="button-youtube">
+                      <!-- Youtube -->
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        height="24"
+                      >
+                        <path
+                          d="M19.6069 6.99482C19.5307 6.69695 19.3152 6.47221 19.0684 6.40288C18.6299 6.28062 16.501 6 12.001 6C7.50098 6 5.37252 6.28073 4.93225 6.40323C4.68776 6.47123 4.4723 6.69593 4.3951 6.99482C4.2863 7.41923 4.00098 9.19595 4.00098 12C4.00098 14.804 4.2863 16.5808 4.3954 17.0064C4.47126 17.3031 4.68676 17.5278 4.93251 17.5968C5.37252 17.7193 7.50098 18 12.001 18C16.501 18 18.6299 17.7194 19.0697 17.5968C19.3142 17.5288 19.5297 17.3041 19.6069 17.0052C19.7157 16.5808 20.001 14.8 20.001 12C20.001 9.2 19.7157 7.41923 19.6069 6.99482ZM21.5442 6.49818C22.001 8.28 22.001 12 22.001 12C22.001 12 22.001 15.72 21.5442 17.5018C21.2897 18.4873 20.547 19.2618 19.6056 19.5236C17.8971 20 12.001 20 12.001 20C12.001 20 6.10837 20 4.39637 19.5236C3.45146 19.2582 2.70879 18.4836 2.45774 17.5018C2.00098 15.72 2.00098 12 2.00098 12C2.00098 12 2.00098 8.28 2.45774 6.49818C2.71227 5.51273 3.45495 4.73818 4.39637 4.47636C6.10837 4 12.001 4 12.001 4C12.001 4 17.8971 4 19.6056 4.47636C20.5505 4.74182 21.2932 5.51636 21.5442 6.49818ZM10.001 15.5V8.5L16.001 12L10.001 15.5Z"
+                          fill="rgba(255,255,255,1)"
+                        ></path>
+                      </svg>
+                    </li>
+                    <li class="button-instagram">
+                      <!-- Instagram -->
+                      <svg
+                        class="i-instagram"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        height="24"
+                      >
+                        <path
+                          d="M12.001 9C10.3436 9 9.00098 10.3431 9.00098 12C9.00098 13.6573 10.3441 15 12.001 15C13.6583 15 15.001 13.6569 15.001 12C15.001 10.3427 13.6579 9 12.001 9ZM12.001 7C14.7614 7 17.001 9.2371 17.001 12C17.001 14.7605 14.7639 17 12.001 17C9.24051 17 7.00098 14.7629 7.00098 12C7.00098 9.23953 9.23808 7 12.001 7ZM18.501 6.74915C18.501 7.43926 17.9402 7.99917 17.251 7.99917C16.5609 7.99917 16.001 7.4384 16.001 6.74915C16.001 6.0599 16.5617 5.5 17.251 5.5C17.9393 5.49913 18.501 6.0599 18.501 6.74915ZM12.001 4C9.5265 4 9.12318 4.00655 7.97227 4.0578C7.18815 4.09461 6.66253 4.20007 6.17416 4.38967C5.74016 4.55799 5.42709 4.75898 5.09352 5.09255C4.75867 5.4274 4.55804 5.73963 4.3904 6.17383C4.20036 6.66332 4.09493 7.18811 4.05878 7.97115C4.00703 9.0752 4.00098 9.46105 4.00098 12C4.00098 14.4745 4.00753 14.8778 4.05877 16.0286C4.0956 16.8124 4.2012 17.3388 4.39034 17.826C4.5591 18.2606 4.7605 18.5744 5.09246 18.9064C5.42863 19.2421 5.74179 19.4434 6.17187 19.6094C6.66619 19.8005 7.19148 19.9061 7.97212 19.9422C9.07618 19.9939 9.46203 20 12.001 20C14.4755 20 14.8788 19.9934 16.0296 19.9422C16.8117 19.9055 17.3385 19.7996 17.827 19.6106C18.2604 19.4423 18.5752 19.2402 18.9074 18.9085C19.2436 18.5718 19.4445 18.2594 19.6107 17.8283C19.8013 17.3358 19.9071 16.8098 19.9432 16.0289C19.9949 14.9248 20.001 14.5389 20.001 12C20.001 9.52552 19.9944 9.12221 19.9432 7.97137C19.9064 7.18906 19.8005 6.66149 19.6113 6.17318C19.4434 5.74038 19.2417 5.42635 18.9084 5.09255C18.573 4.75715 18.2616 4.55693 17.8271 4.38942C17.338 4.19954 16.8124 4.09396 16.0298 4.05781C14.9258 4.00605 14.5399 4 12.001 4ZM12.001 2C14.7176 2 15.0568 2.01 16.1235 2.06C17.1876 2.10917 17.9135 2.2775 18.551 2.525C19.2101 2.77917 19.7668 3.1225 20.3226 3.67833C20.8776 4.23417 21.221 4.7925 21.476 5.45C21.7226 6.08667 21.891 6.81333 21.941 7.8775C21.9885 8.94417 22.001 9.28333 22.001 12C22.001 14.7167 21.991 15.0558 21.941 16.1225C21.8918 17.1867 21.7226 17.9125 21.476 18.55C21.2218 19.2092 20.8776 19.7658 20.3226 20.3217C19.7668 20.8767 19.2076 21.22 18.551 21.475C17.9135 21.7217 17.1876 21.89 16.1235 21.94C15.0568 21.9875 14.7176 22 12.001 22C9.28431 22 8.94514 21.99 7.87848 21.94C6.81431 21.8908 6.08931 21.7217 5.45098 21.475C4.79264 21.2208 4.23514 20.8767 3.67931 20.3217C3.12348 19.7658 2.78098 19.2067 2.52598 18.55C2.27848 17.9125 2.11098 17.1867 2.06098 16.1225C2.01348 15.0558 2.00098 14.7167 2.00098 12C2.00098 9.28333 2.01098 8.94417 2.06098 7.8775C2.11014 6.8125 2.27848 6.0875 2.52598 5.45C2.78014 4.79167 3.12348 4.23417 3.67931 3.67833C4.23514 3.1225 4.79348 2.78 5.45098 2.525C6.08848 2.2775 6.81348 2.11 7.87848 2.06C8.94514 2.0125 9.28431 2 12.001 2Z"
+                          fill="rgba(255,255,255,1)"
+                        ></path>
+                      </svg>
+                    </li>
+
+                    <li class="button-tiktok">
+                      <!-- Tiktok -->
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        height="24"
+                      >
+                        <path
+                          d="M16 8.24537V15.5C16 19.0899 13.0899 22 9.5 22C5.91015 22 3 19.0899 3 15.5C3 11.9101 5.91015 9 9.5 9C10.0163 9 10.5185 9.06019 11 9.17393V12.3368C10.5454 12.1208 10.0368 12 9.5 12C7.567 12 6 13.567 6 15.5C6 17.433 7.567 19 9.5 19C11.433 19 13 17.433 13 15.5V2H16C16 4.76142 18.2386 7 21 7V10C19.1081 10 17.3696 9.34328 16 8.24537Z"
+                          fill="rgba(255,255,255,1)"
+                        ></path>
+                      </svg>
+                    </li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      <!-- <div class="main-content"> -->
+        <div class="wrapper-play">
+          <div class="header-play">
+            <div class="song-details">
+              <h1 class="name">Name Song</h1>
+              <h3 class="artist">Name Artist</h3>
+            </div>
+            <button class="button-header-player" onclick="toogleLirycs()">
+              <!-- List song icon -->
+         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path d="M21 3C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3H21ZM20 5H4V19H20V5ZM9 8C10.1045 8 11.1049 8.44841 11.829 9.173L10.4153 10.5866C10.0534 10.2241 9.55299 10 9 10C7.895 10 7 10.895 7 12C7 13.105 7.895 14 9 14C9.5525 14 10.0525 13.7762 10.4144 13.4144L11.828 14.828C11.104 15.552 10.104 16 9 16C6.792 16 5 14.208 5 12C5 9.792 6.792 8 9 8ZM16 8C17.1045 8 18.1049 8.44841 18.829 9.173L17.4153 10.5866C17.0534 10.2241 16.553 10 16 10C14.895 10 14 10.895 14 12C14 13.105 14.895 14 16 14C16.5525 14 17.0525 13.7762 17.4144 13.4144L18.828 14.828C18.104 15.552 17.104 16 16 16C13.792 16 12 14.208 12 12C12 9.792 13.792 8 16 8Z" fill="rgba(255,255,255,1)"></path></svg>
+            </button>
+          </div>
+          <div class="player">
+            <div class="img-area">
+              <video  width="320" height="240" controls class="img-cover" >
+                <source src="" type="video/mp4" />
+            
+                Your browser does not support the video tag.
+              </video>
+            </div>
+           
+            <div id="visualiser"></div>
+           
+            <div class="audioC">
+              <div class="song-timer">
+                <span class="current-timer">0:00</span>
+                <span class="max-duration">0:00</span>
+              </div>
+            </div>
+            <div class="progress-area">
+              <div class="progress-bar">
+              
+
+                <video muted  id="main-audio" class="video-hidden"  width="320" height="240" controls>
+                <source    src="" type="video/mp4" />
+          
+                Your browser does not support the video tag.
+              </video>
+
+
+              </div>
+            </div>
+          </div>
+          <div class="controls">
+            <button class="buttonsControl prev">
+              <img
+                id="prev"
+                src="assets/img/rewind-line.svg"
+                alt="Prev"
+                srcset=""
+              />
+            </button>
+
+            <button id="play" class="buttonsControl play-pause">
+              <img src="assets/img/play-fill.svg" alt="Play" />
+            </button>
+
+            <button id="next" class="buttonsControl next">
+              <img src="assets/img/speed-line.svg" alt=""  />
+            </button>
+          </div>
+          <!-- Label Social Media -->   
+            <div class="label-media-social">
+                   <div class="shorts-top">
+                    <h1 class="social-name">Shorts</h1>
+                    <h3 class="viral-name">Hits</h3>
+                    <div class="logo-icon-top"> <img class="icon-labels" src="assets/img/shorts.png" alt="tiktok-logo"></div>
+                  </div>
+
+                  <div class="tiktok-top">
+                    <h1 class="social-name">TikTok</h1>
+                    <h3 class="viral-name">Hits</h3>
+                    <div class="logo-icon-top"> <img class="icon-labels" src="assets/img/tiktok.png" alt="tiktok-logo"></div>
+                  </div>
+
+                  <div class="instagram-top">
+                    <h1 class="social-name">Instagram</h1>
+                    <h3 class="viral-name">Hits</h3>
+                    <div class="logo-icon-top"> <img class="icon-labels" src="assets/img/instagram.svg" alt="tiktok-logo"></div>
+                  </div>
+                    
+              </div>
+        </div>
+        <div class="wrapper-list"></div>
+      </div>
+
+      <div class="main-content-list">
+      <nav>
+        <div class="title-logo">
+          
+          <h1>List Songs </h1>
+        </div>
+
+        <div class="menu-icon" onclick="toogleListSong()">
+          <span class="line-1-list"></span>
+          <span class="line-2-list"></span>
+        </div>
+        
+        
+
+
+
+        
+      </nav>
+      
+      <div class="content-list-all-song">
+                
+        <ul class="list-all-songs"></ul>
+
+      </div>
+
+
+     </div>
+
+     </div>
+
+      <footer>
+        Feito com ♥ por
+        <a href="https://kleitonads.github.io/MyProfile2017/">
+          &nbsp;KleitonADS</a
+        >
+      </footer>
+    </div>
+
+  
+    </div>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
