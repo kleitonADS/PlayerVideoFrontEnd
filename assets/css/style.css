@@ -32,7 +32,7 @@
 }
 
 body {
-  background-color: var(--mainColorPink);
+  background-color: var(--mainColorGreen);
   height: 100vh;
   display: flex;
   width: 100%;
@@ -78,7 +78,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
- flex-direction: row;
+  flex-direction: row;
   width: 100%;
   height: 40px;
   padding: 3rem 1rem 0 1rem;
@@ -130,7 +130,7 @@ nav h1 {
 }
 
 .line-1-list,
-.line-2-list{
+.line-2-list {
   height: 2px;
   width: 100%;
   background: var(--colorWhite);
@@ -143,7 +143,6 @@ nav h1 {
 .menu-icon:hover .line-2 {
   background: var(--mainColorGreen);
 }
-
 
 .menu-icon:hover .line-1-list {
   background: var(--mainColorGreen);
@@ -257,7 +256,6 @@ nav.dropdown-active + .dropdown-menu {
   margin-top: 2.5rem;
   height: auto;
   display: initial;
-  transition: ease-in 0.3s;
 }
 
 nav.dropdown-active .menu-icon .line-1 {
@@ -300,42 +298,6 @@ nav.dropdown-active .menu-icon .line-2 {
   padding: 0.7rem;
   border-right: 1px solid var(--colorWhite);
 }
-.icons-social-medias {
-  display: flex;
-  justify-content: space-between;
-}
-.icons-social-medias li {
-  margin: 0.5rem 0.5rem;
-  width: 35px;
-  height: 35px;
-  border: 2px solid var(--colorWhite);
-  border-radius: 50%;
-  background: var(--backgroundButtonPink);
-  box-shadow: var(--boxShadowIconsSocialMediaPink);
-  transform: all 0.3s ease;
-  cursor: pointer;
-}
-
-.icons-social-medias li svg {
-  scale: 2;
-  height: 10px;
-}
-
-.button-tiktok.active,
-.button-instagram.active,
-.button-youtube.active {
-  box-shadow: var(--boxShadowButtonsMediasSocialPink);
-  background: var(--mainColorGreen);
-  border: 2px solid var(--colorBorderPink);
-  scale: 1.2;
-}
-
-.button-tiktok:hover,
-.button-instagram:hover,
-.button-youtube:hover {
-  border: 2px solid var(--mainColorGreen);
-  transition: ease-in 0.4s;
-}
 
 li.label-controls {
   border: 0;
@@ -358,79 +320,10 @@ li.label-li {
 
 .label.controls-dropdown-lables {
   margin: 0px;
-  
-}
-.message-top{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  color: white;
-  font-size: 0.6rem;
-  text-transform: capitalize;
-  padding: 0px 0 10px 0;
-  margin-bottom: 0.5rem;
-}
-
-
-.label-media-social {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-.shorts-top,
-.instagram-top,
-.tiktok-top {
-  width: 90%;
-  justify-content: center;
-  display: flex;
-  flex-direction: row;
-  padding: 8px 20px 0px 20px;
-  border-radius: 50px;
-  margin-top: -39rem;
-}
-
-.shorts-top.active {
-  display: flex;
-}
-
-.shorts-top {
-  display: none;
-}
-
-.tiktok-top {
-  display: none;
-}
-
-.tiktok-top.active {
-  display: flex;
-}
-
-.instagram-top {
-  display: none;
-}
-
-.instagram-top.active {
-  display: flex;
-}
-
-.social-name {
-  color: white;
-  font-size: 1.3rem;
-  text-transform: capitalize;
 }
 
 .label-controls.off {
   display: none;
-}
-
-.viral-name {
-  color: white;
-  font-size: 1rem;
-  text-transform: capitalize;
-  padding: 0px 0 10px 0;
 }
 
 .main-content {
@@ -446,14 +339,9 @@ li.label-li {
   margin: 2rem;
   border: 4px solid var(--colorBorderPink);
   background: var(--mainColorPink);
-  box-shadow: 14px 14px 28px #c11ac4, -14px -14px 28px #ff23ff;
-  z-index: 100;
-}
-
-.icon-labels {
-  width: 35px;
-  height: 35px;
-  margin-left: 5px;
+  /* box-shadow: 14px 14px 28px #c11ac4, -14px -14px 28px #ff23ff;
+  z-index: 100; */
+  box-shadow: var(--boxShadowDropDownMenuGreen);
 }
 
 .main-content-list {
@@ -468,7 +356,8 @@ li.label-li {
   padding-bottom: 3rem;
   border: 4px solid var(--colorBorderPink);
   background: var(--mainColorPink);
-  box-shadow: 14px 14px 28px #c11ac4, -14px -14px 28px #ff23ff;
+  box-shadow: var(--boxShadowDropDownMenuGreen);
+  /* box-shadow: 14px 14px 28px #c11ac4, -14px -14px 28px #ff23ff; */
   z-index: 100;
   opacity: 0;
   visibility: hidden;
@@ -491,7 +380,7 @@ li.label-li {
   box-shadow: 8px 8px 16px #740f75, 1px 6px 16px #ff2dff;
   opacity: 0;
   visibility: hidden;
-  transition: cubic-bezier(0, 0, 0.3, 0.89) 2s;
+  /* transition: cubic-bezier(0, 0, 0.3, 0.89) 2s; */
 }
 
 .header-play,
@@ -555,8 +444,8 @@ li.label-li {
   display: flex;
   opacity: 1;
   visibility: visible;
-  -webkit-transition: cubic-bezier(0, 0, 0.3, 0.89) 2s;
-  transition: cubic-bezier(0, 0, 0.3, 0.89) 2s;
+  /* -webkit-transition: cubic-bezier(0, 0, 0.3, 0.89) 2s;
+  transition: cubic-bezier(0, 0, 0.3, 0.89) 2s; */
 }
 
 .player {
@@ -689,8 +578,6 @@ li.label-li {
   background: #e31ee6;
 }
 
-
-
 .button-header-player {
   box-shadow: 15px 15px 45px #8d138f, -15px -15px 45px #ff29ff;
 }
@@ -728,7 +615,9 @@ li.label-li {
 video::-webkit-media-controls {
   display: none;
 }
-
+canvas {
+  z-index: 122020;
+}
 footer {
   width: 100vw;
   height: auto;
@@ -737,13 +626,12 @@ footer {
   align-items: center;
   color: #fff;
   padding: 1rem;
- }
+}
 
 footer a {
   color: #fff;
   font-style: oblique;
 }
-
 
 .content-img-cover {
   display: flex;
@@ -780,26 +668,6 @@ footer a {
   background-color: transparent;
 }
 
-.button-new-video {
-  display: flex;
-  width: 180px;
-  color: var(--colorWhite);
-  padding: 0.5rem;
-  background-color: var(--mainColorPink);
-  border: 3px solid var(--mainColorGreen);
-  border-radius: 10px;
-  cursor: pointer;
-  justify-content: space-around;
-  align-items: center;
-  box-shadow: 14px 14px 28px #c11ac4, -14px -14px 28px #ff23ff;
-}
-
-.button-new-video:hover {
-  background-color: var(--mainColorGreen);
-  border: 3px solid var(--mainColorPink);
-  color: var(--colorWhite);
-}
-
 .list-all-songs li {
   display: flex;
   height: auto;
@@ -820,147 +688,16 @@ h2 {
   color: var(--colorWhite);
 }
 
-label.custom-file-upload {
-  display: flex;
-  width: 100%;
-  color: var(--colorWhite);
-  padding: 0.5rem;
-  margin-top: 1rem;
-  border: 2px solid var(--colorWhite);
-  border-radius: 10px;
-  cursor: pointer;
-  justify-content: space-around;
-  align-items: center;
-  background: var(--mainColorPink);
-  box-shadow: 10px 8px 28px #c11ac4, -10px -8px 28px #ff23ff;
-}
-
 .bt-delete {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 35px;
   height: 35px;
-  border: 3px solid #b0bd00;
+  border: 3px solid transparent;
   border-radius: 50%;
   background: transparent;
-  box-shadow: 16px 16px 32px #c11ac4, -16px -16px 32px #ff23ff;
   transform: all 0.3s ease;
-  cursor: pointer;
-}
-
-.bt-delete:hover {
-  background: var(--mainColorGreen);
-}
-
-.new-file-content {
-  width: 90%;
-  display: none;
-  height: auto;
-  flex-direction: column;
-  border: 2px solid var(--borderColorPink);
-  border-radius: 5%;
-  padding: 1rem;
-  align-items: center;
-  margin-bottom: 1rem;
-  justify-content: center;
-  box-shadow: 14px 14px 28px #c11ac4, -14px -14px 28px #ff23ff;
-  transition: all 0.2s ease;
-}
-
-.content-inputs-form {
-  display: flex;
-  width: 90%;
-  height: auto;
-  flex-direction: column;
-}
-
-.title-new-video h1 {
-  font-size: 1rem;
-  text-align: left;
-  color: var(--colorWhite);
-  padding-bottom: 1rem;
-}
-
-.content-inputs-form input {
-  display: flex;
-  width: 100%;
-  color: var(--colorWhite);
-  padding: 0.5rem;
-  margin-top: 1rem;
-  border: 2px solid var(--colorWhite);
-  border-radius: 10px;
-  cursor: pointer;
-  justify-content: space-around;
-  align-items: center;
-  background: var(--mainColorPink);
-  box-shadow: 10px 8px 28px #c11ac4, -10px -8px 28px #ff23ff;
-}
-.content-inputs-form input::placeholder {
-  color: var(--colorWhite);
-  user-select: none;
-}
-
-.bt-send {
-  display: flex;
-  width: 100%;
-  margin-top: 1.2rem;
-  margin-bottom: 1.2rem;
-  color: var(--colorWhite);
-  padding: 0.5rem;
-  background-color: var(--mainColorGreen);
-  border: 3px solid var(--mainColorPink);
-  border-radius: 10px;
-  cursor: pointer;
-  justify-content: space-around;
-  align-items: center;
-  box-shadow: 14px 14px 28px #c11ac4, -14px -14px 28px #ff23ff;
-}
-
-.bt-send:hover {
-  background: var(--colorWhite);
-  color: #ff23ff;
-}
-
-.inputFiles[type="file"] {
-  display: flex;
-  width: 100%;
-  border: 0px;
-  background: none;
-  padding: 0;
-  cursor: pointer;
-  border-radius: 0;
-  margin: 0;
-  height: 0;
-}
-
-.custom-file-upload {
-  font-weight: 400;
-  color: var(--colorWhite);
-  margin: 1rem 0 0 0;
-  text-align: left;
-  font-size: 1rem;
-}
-
-.new-file-content.active {
-  display: flex;
-}
-
-.inputFiles[type="file"]::file-selector-button {
-  display: flex;
-  width: 100%;
-  border: none;
-  background: var(--mainColorPink);
-  padding: 10px 20px;
-  border-radius: 10px;
-  border: 2px solid var(--colorWhite);
-  color: #fff;
-  cursor: pointer;
-  transition: background 0.2s ease-in-out;
-}
-
-.inputFiles[type="file"]::file-selector-button:hover {
-  background: var(--mainColorGreen);
 }
 
 .list-all-songs.list-none {
@@ -973,34 +710,20 @@ label.custom-file-upload {
   height: 0;
 }
 
-.song-active .content-bt-delete .bt-delete {
-  border: 3px solid var(--colorWhite);
-}
-
-.song-active .content-bt-delete .bt-delete:hover {
-  background: var(--mainColorGreen);
-  border: 0;
-}
-
-
-.content-button-new-video {
-  display: flex;
-  justify-content:flex-start;
-  padding: 1rem;
-
-}
 .green-theme {
-  background-color: var(--mainColorGreen);
+  background-color: var(--mainColorPink);
 }
 
 .green-theme .main-content {
-  box-shadow: var(--boxShadowDropDownMenuGreen);
+   box-shadow: 14px 14px 28px #c11ac4, -14px -14px 28px #ff23ff; 
+  /* box-shadow: var(--boxShadowDropDownMenuGreen); */
   border: 0.5px solid var(--colorBorderGreen);
   background: var(--mainColorGreen);
 }
 
 .green-theme .main-content-list {
-  box-shadow: var(--boxShadowDropDownMenuGreen);
+  box-shadow: 14px 14px 28px #c11ac4, -14px -14px 28px #ff23ff; 
+  /* box-shadow: var(--boxShadowDropDownMenuGreen); */
   border: 0.5px solid var(--colorBorderGreen);
   background: var(--mainColorGreen);
 }
@@ -1033,7 +756,7 @@ label.custom-file-upload {
 }
 
 .green-theme .buttonsControl:active {
-    box-shadow: 15px 15px 45px #96a100, -15px -15px 45px #cad900;
+  box-shadow: 15px 15px 45px #96a100, -15px -15px 45px #cad900;
 }
 
 .green-theme .img-area {
@@ -1079,29 +802,6 @@ label.custom-file-upload {
   background: var(--mainColorPink);
 }
 
-.green-theme .icons-social-medias li {
-  background: var(--mainColorGreen);
-  box-shadow: var(--boxShadowIconsSocialMediaGreen);
-  border: 2px solid var(--colorWhite);
-}
-
-.green-theme .button-tiktok:hover,
-.green-theme .button-instagram:hover,
-.green-theme .button-youtube:hover {
-  border: 2px solid var(--mainColorPink);
-  transition: ease-in 0.4s;
-}
-
-
-
-.green-theme .itens-menu li.button-tiktok.active,
-  .green-theme .itens-menu li.button-instagram.active,
-  .green-theme .itens-menu li.button-youtube.active {
-    box-shadow: var(--boxShadowButtonsMediasSocialGreen);
-    background: var(--mainColorPink);
-    border: 2px solid var(--mainColorGreen);
-  }
-
 .green-theme .button-header-player {
   border: 2px solid var(--colorBorderGreen);
   background-color: var(--mainColorGreen);
@@ -1110,48 +810,36 @@ label.custom-file-upload {
 
 .green-theme .list-all-songs li {
   box-shadow: 14px 14px 28px #96a100, -14px -14px 28px #cad900;
-  
   border: 4px solid var(--mainColorGreen);
 }
 
 .green-theme .bt-delete {
-  border: 3px solid var(--mainColorPink);
-  box-shadow: 14px 14px 28px #96a100, -14px -14px 28px #cad900;
+  border: 3px solid transparent;
 }
 
 .green-theme .bt-play {
   border: 3px solid var(--mainColorPink);
+}
+
+.green-theme .button-new-video {
+  background-color: var(--mainColorGreen);
+  border: 3px solid var(--mainColorPink);
   box-shadow: 14px 14px 28px #96a100, -14px -14px 28px #cad900;
-}
-
-.green-theme .button-new-video{
-      background-color: var(--mainColorGreen);
-          border: 3px solid var(--mainColorPink);
-          box-shadow:  14px 14px 28px #96a100,
-             -14px -14px 28px #cad900;
-}
-
-.green-theme .new-file-content {
-  box-shadow:  14px 14px 28px #96a100,
-             -14px -14px 28px #cad900;
 }
 
 .green-theme .bt-send {
   background: var(--mainColorPink);
-  box-shadow:  14px 14px 28px #96a100,
-             -14px -14px 28px #cad900;
+  box-shadow: 14px 14px 28px #96a100, -14px -14px 28px #cad900;
 }
 
 .green-theme .content-inputs-form input {
   background: var(--mainColorGreen);
-  box-shadow:  10px 8px 28px #96a100,
-             -10px -8px 28px #cad900;
+  box-shadow: 10px 8px 28px #96a100, -10px -8px 28px #cad900;
 }
 
 .green-theme label.custom-file-upload {
   background: var(--mainColorGreen);
-  box-shadow:  10px 8px 28px #96a100,
-             -10px -8px 28px #cad900;
+  box-shadow: 10px 8px 28px #96a100, -10px -8px 28px #cad900;
 }
 
 @media screen and (min-width: 700px) {
@@ -1184,8 +872,7 @@ label.custom-file-upload {
 
   nav.dropdown-active + .dropdown-menu {
     margin-top: 8rem;
-    width: min-content ;
-  
+    width: min-content;
   }
 
   .progress-bar::before {
@@ -1206,7 +893,6 @@ label.custom-file-upload {
     border-radius: 20px;
     padding: 1rem;
     margin-top: -4.8rem;
-
 
     background: #e31ee6;
     box-shadow: 8px 8px 16px #740f75, 1px 6px 16px #ff2dff;
@@ -1322,8 +1008,6 @@ label.custom-file-upload {
     border: 1.8px solid var(--mainColorGreen);
   }
 
-  
-
   .itens-menu li.button-tiktok.active,
   .itens-menu li.button-instagram.active,
   .itens-menu li.button-youtube.active {
@@ -1406,10 +1090,3 @@ label.custom-file-upload {
     margin-top: 20px;
   }
 }
-
-
-
-
-
-
-
